@@ -23,8 +23,10 @@
   },
   "dependencies": {
     "@hot-loader/react-dom": "^17.0.1",
+    "axios": "^0.21.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-use": "^17.2.4"
   },
   "scripts": {
     "prettify": "pretty-quick --staged --no-semi",
