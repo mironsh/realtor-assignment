@@ -1,12 +1,22 @@
-const path = require("path")
-const webpack = require("webpack")
+const path = require('path');
 
 module.exports = {
-  entry: ["react-hot-loader/patch", "./src"],
   devtool: "inline-source-map",
   mode: "development",
+  entry: {
+    app: path.join(__dirname, 'src', 'index.tsx')
+  },
+  target: 'web',
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
+  },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: '/node_modules/'
+      },
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
@@ -14,29 +24,14 @@ module.exports = {
         options: { presets: ["@babel/env"] },
       },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
             loader: "file-loader",
           },
-        ],
-      },
-      {
-        test: /\.tsx?$/,
-        use: "ts-loader",
-        exclude: /node_modules/,
-      },
+        ]
+      }
     ],
-  },
-  resolve: {
-    alias: {
-      "react-dom": "@hot-loader/react-dom",
-    },
-    extensions: ["*", ".js", ".jsx", ".ts", "tsx"],
   },
   output: {
     path: path.resolve(__dirname, "dist/"),
@@ -50,5 +45,4 @@ module.exports = {
     hot: true,
     open: true
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
 }

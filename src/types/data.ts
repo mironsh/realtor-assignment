@@ -4,21 +4,21 @@ export default interface JsonData {
     site: Site
 }
 
-interface Data {
+export interface Data {
   bbox: number[]
   features: Feature[]
   metadata: any
   type: string
 }
 
-interface Feature {
+export interface Feature {
   geometry: { type: string; coordinates: number[] }
   id: string
   properties: any
   type: string
 }
 
-interface Profile {
+export interface Profile {
     avatarImage: string
     bio: string
     email: string
@@ -27,7 +27,7 @@ interface Profile {
     phone: string
 }
 
-interface Site {
+export interface Site {
     heroImage: string
     logoImage: string
     title: string
