@@ -9,7 +9,6 @@ import "./styles/style.scss"
 
 function App() {
   const [siteData, loading] = useData()
-  console.log(siteData, "siteData")
   if (loading) {
     return <Spinner />
   }

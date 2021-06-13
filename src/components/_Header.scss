@@ -9,6 +9,9 @@
     .home {
       display: flex;
       padding: 1rem;
+      img {
+        height: 100%;
+      }
     }
     .title {
       color: $grey;
