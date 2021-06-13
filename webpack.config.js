@@ -55,5 +55,6 @@ module.exports = {
     publicPath: "http://localhost:3000/dist/",
     hot: true,
     open: true,
+    historyApiFallback: true
   },
 }

@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom"
 import { DataContext } from "./hooks/useDataContext"
 import Home from "./components/Home";
 import "./styles/style.scss"
+import Details from "./components/Details"
 
 function App() {
   const [siteData, loading] = useData()
@@ -22,9 +23,9 @@ function App() {
           {/*<Route path="/profile">*/}
           {/*  <Profile />*/}
           {/*</Route>*/}
-          {/*<Route path="/dashboard">*/}
-          {/*  <Earthquake />*/}
-          {/*</Route>*/}
+          <Route path="/details/:id">
+            <Details />
+          </Route>
         </Switch>
       </DataContext.Provider>
     </BrowserRouter>
