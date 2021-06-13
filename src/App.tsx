@@ -1,11 +1,11 @@
 import React, { useContext } from "react"
 import "./App.css"
 import useData from "./hooks/useData"
-import Header from "./components/Header"
 import { Spinner } from "reactstrap"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
-import useDataContext, { DataContext } from "./hooks/useDataContext"
+import { DataContext } from "./hooks/useDataContext"
 import Home from "./components/Home";
+import "./styles/style.scss"
 
 function App() {
   const [siteData, loading] = useData()

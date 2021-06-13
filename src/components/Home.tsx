@@ -4,7 +4,7 @@ import Page from "./Page";
 const Home = () => {
   return (
     <Page>
-      data
+
     </Page>
   );
 };

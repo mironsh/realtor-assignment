@@ -1,0 +1,24 @@
+#header {
+  height: 5rem;
+  background: $light-grey;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+
+    .home {
+      display: flex;
+      padding: 1rem;
+    }
+    .title {
+      color: $grey;
+      font-size: 3rem;
+      line-height: 0;
+    }
+    .profile {
+      display: flex;
+      align-self: center;
+      padding: 1rem;
+    }
+  }
+}

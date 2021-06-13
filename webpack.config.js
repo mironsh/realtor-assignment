@@ -1,21 +1,21 @@
-const path = require('path');
+const path = require("path")
 
 module.exports = {
   devtool: "inline-source-map",
   mode: "development",
   entry: {
-    app: path.join(__dirname, 'src', 'index.tsx')
+    app: path.join(__dirname, "src", "index.tsx"),
   },
-  target: 'web',
+  target: "web",
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: [".ts", ".tsx", ".js"],
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: '/node_modules/'
+        use: "ts-loader",
+        exclude: "/node_modules/",
       },
       {
         test: /\.(js|jsx)$/,
@@ -29,8 +29,19 @@ module.exports = {
           {
             loader: "file-loader",
           },
-        ]
-      }
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
+      },
     ],
   },
   output: {
@@ -43,6 +54,6 @@ module.exports = {
     port: 3000,
     publicPath: "http://localhost:3000/dist/",
     hot: true,
-    open: true
+    open: true,
   },
 }
