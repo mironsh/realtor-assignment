@@ -8,3 +8,10 @@ body {
 td {
   text-align: center;
 }
+
+a {
+  color: $blue;
+  &:visited {
+    color: $purple;
+  }
+}
