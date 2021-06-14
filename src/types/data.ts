@@ -1,7 +1,7 @@
 export default interface JsonData {
-    data: Data
-    profile: Profile
-    site: Site
+  data: Data
+  profile: Profile
+  site: Site
 }
 
 export interface Data {
@@ -14,21 +14,28 @@ export interface Data {
 export interface Feature {
   geometry: { type: string; coordinates: number[] }
   id: string
-  properties: any
+  properties: {
+    title: string
+    mag: number
+    time: Date
+    status: string
+    tsunami: number
+    type: string
+  }
   type: string
 }
 
 export interface Profile {
-    avatarImage: string
-    bio: string
-    email: string
-    firstName: string
-    lastName: string
-    phone: string
+  avatarImage: string
+  bio: string
+  email: string
+  firstName: string
+  lastName: string
+  phone: string
 }
 
 export interface Site {
-    heroImage: string
-    logoImage: string
-    title: string
+  heroImage: string
+  logoImage: string
+  title: string
 }
