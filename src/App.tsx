@@ -4,9 +4,10 @@ import useData from "./hooks/useData"
 import { Spinner } from "reactstrap"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import { DataContext } from "./hooks/useDataContext"
-import Home from "./components/Home";
+import Home from "./components/Home"
 import "./styles/style.scss"
 import Details from "./components/Details"
+import Profile from "./components/Profile"
 
 function App() {
   const [siteData, loading] = useData()
@@ -20,9 +21,9 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          {/*<Route path="/profile">*/}
-          {/*  <Profile />*/}
-          {/*</Route>*/}
+          <Route path="/profile">
+            <Profile />
+          </Route>
           <Route path="/details/:id">
             <Details />
           </Route>

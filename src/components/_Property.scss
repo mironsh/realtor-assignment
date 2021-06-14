@@ -1,6 +1,13 @@
+$title-size: 10rem;
+$data-size: 25rem;
+
 .property {
   display: grid;
-  grid-template-columns: 10rem 25rem;
+  grid-template-columns: $title-size $data-size;
+  padding: 0.2rem 0;
+  &.property__short {
+    grid-template-columns: $title-size $data-size / 2;
+  }
 }
 
 .property--title {

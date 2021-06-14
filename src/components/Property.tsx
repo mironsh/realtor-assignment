@@ -1,8 +1,13 @@
-import React, {FunctionComponent} from "react";
+import React, { FunctionComponent, ReactNode } from "react"
+import classNames from "classnames";
 
-type PropertyProps = { title: string; data: string | number }
-const Property: FunctionComponent<PropertyProps> = ({title, data}) => (
-  <div className={"property"}>
+type PropertyProps = { title: string; data: ReactNode; isShort?: boolean }
+const Property: FunctionComponent<PropertyProps> = ({
+  title,
+  data,
+  isShort = false,
+}) => (
+  <div className={classNames("property", {"property__short": isShort})}>
     <span className={"property--title"}>{title}</span>
     <span className={"property--data"}>{data}</span>
   </div>
