@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 import "./App.css"
 import useData from "./hooks/useData"
 import { Spinner } from "reactstrap"
@@ -11,6 +11,8 @@ import Profile from "./components/Profile"
 
 function App() {
   const [siteData, loading] = useData()
+
+  // do not display anything other than a spinner while loading
   if (loading) {
     return <Spinner />
   }

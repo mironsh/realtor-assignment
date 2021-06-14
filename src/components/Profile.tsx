@@ -1,13 +1,11 @@
 import React, { FunctionComponent } from "react"
 import useDataContext from "../hooks/useDataContext"
 import Page from "./Page"
-import Details from "./Details"
 import Property from "./Property"
 
 const Profile: FunctionComponent = () => {
   const { profile } = useDataContext()
 
-  console.log(profile, "profile")
   return (
     <Page>
       <h2>Profile</h2>
