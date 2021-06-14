@@ -1,5 +1,4 @@
 import React from "react"
-import "./App.css"
 import useData from "./hooks/useData"
 import { Spinner } from "reactstrap"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
