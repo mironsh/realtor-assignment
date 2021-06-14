@@ -14,6 +14,7 @@ const Home = () => {
     },
   ]
 
+  // columns declaration to be used with BootstrapTable
   const columns = [
     {
       dataField: "properties.title",

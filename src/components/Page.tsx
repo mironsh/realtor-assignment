@@ -2,6 +2,9 @@ import React, {FunctionComponent} from 'react';
 import Header from "./Header";
 import useDataContext from "../hooks/useDataContext";
 
+/**
+ * Page component is used to deliver consistent style for all app pages, including the header
+ */
 const Page: FunctionComponent = ({children}) => {
   const data = useDataContext()
   return (
